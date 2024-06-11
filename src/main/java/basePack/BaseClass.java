@@ -18,7 +18,7 @@ public static WebDriver driver;
 		 */
 		//Yuvaraj
 		
-		driver = new ChromeDriver(options);
+		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); 
 		driver.manage().window().maximize();
 	}
