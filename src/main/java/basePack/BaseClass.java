@@ -17,7 +17,9 @@ public static WebDriver driver;
 		 * );
 		 */
 		//Yuvaraj
-		driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless");
+		driver = new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); 
 		driver.manage().window().maximize();
 	}
