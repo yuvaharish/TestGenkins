@@ -17,8 +17,7 @@ public static WebDriver driver;
 		 * );
 		 */
 		//Yuvaraj
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless=new");
+		
 		driver = new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); 
 		driver.manage().window().maximize();
