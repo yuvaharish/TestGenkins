@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class BaseClass {
 public static WebDriver driver;
@@ -17,8 +18,9 @@ public static WebDriver driver;
 		 * );
 		 */
 		//Yuvaraj
-		
-		driver = new ChromeDriver();
+		ChromeOptions option = new ChromeOptions();
+		option.addArguments("headless");
+		driver = new ChromeDriver(option);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); 
 		driver.manage().window().maximize();
 	}
